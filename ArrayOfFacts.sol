@@ -9,17 +9,22 @@ contract ArrayOfFacts {
     owner = msg.owner;
     }
     
-    modifer onlyOwner() {
-    require(msg.sender == owner, "Only cvontract owner can do this");
-    _;
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only cvontract owner can do this");
+        _;
     }
     
     function add(string memory fact) public onlyOwner {
-    facts.push(fact);
+        facts.push(fact);
     }
     
     function count() public view returns(uint256 factCount) {
-    return facts.length;
+        return facts.length;
     }
+    
+    function getFact(uint256 index) public view returns(string memory fact) {
+        return facts[index];
+    }
+ }
     
  
