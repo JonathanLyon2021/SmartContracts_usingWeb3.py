@@ -9,3 +9,8 @@ contract ArrayOfFacts {
     owner = msg.owner;
     }
     
+    modifer onlyOwner() {
+    require(msg.sender == owner, "Only cvontract owner can do this");
+    _;
+    }
+    
