@@ -10,7 +10,7 @@ an already deployed contract on the Ethereum Goerli Testnet.
 Web3.py requires Python 3. It can be installed using pip as follows.
 For this exercise we will use web3 5.29.0.
 
-      pip install web3
+      `pip install web3`
       
 Create a new Python file.
 We will need HTTPProvider in order to create our connection to the Goerli Testnet using Infura.io.
