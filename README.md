@@ -34,3 +34,11 @@ Copy the private key and the address. The address will be needed to easily calcu
 We will create a simple transaction, which adds a fact to the contract, sign it with the private key and send it.
 Try adding a fact using another private key. The attempt will be unsuccessful because only the owner of the
 contract can add facts.
+
+3. Reading from the Smart Contract
+When reading from a Smart Contract, no wallets or private keys are needed.
+First, create a method which gets a fact by a given index.
+
+Then create a method, which gets how many facts are stored in the contract.
+
+Congratulations! You've finished the exercise.
