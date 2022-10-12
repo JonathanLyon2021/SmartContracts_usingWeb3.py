@@ -14,3 +14,12 @@ contract ArrayOfFacts {
     _;
     }
     
+    function add(string memory fact) public onlyOwner {
+    facts.push(fact);
+    }
+    
+    function count() public view returns(uint256 factCount) {
+    return facts.length;
+    }
+    
+ 
