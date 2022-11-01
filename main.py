@@ -79,3 +79,12 @@ w3.eth.sendRawTransaction(signed_txn.rawTransaction)
 fact = "The times 03/Jan/2009 Chancellor on brink of second bailout for banks"
 add_fact(CONTRACT_INSTANCE, ACCOUNT3_PRIVATE_KEY, ACCOUNT3_ADDRESS, fact)
 
+
+"""Reading from the Smart Contract"""
+"""This method gets facts by a given index"""
+def get_fact(contract_instance, index):
+    fact = contract_instance.functions.getFact(index).call()
+    print(fact)
+
+get_fact(CONTRACT_INSTANCE, 0) # 0 is the index of the fact
+"""Output: The times 03/Jan/2009 Chancellor on brink of second bailout for banks"""
