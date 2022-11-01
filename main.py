@@ -60,3 +60,22 @@ ABI = [
 		"type": "function"
 	}
 ]
+
+CONTRACT_INSTANCE = w3.eth.contract(address=CONTRACT_ADDRESS, abi=ABI);
+
+"""We create a simple transaction, which adds a fact to the contract, we sign it with the private key and send it."""
+def add_fact(contract_instance, private_key, address, fact):
+    noonce = w3.eth.getTransactionCount(address)
+    add_transaction = contract_instance.functions.add(fact).buildTransaction({
+        'gas': 4600000,
+        'nonce': nonce
+    })
+
+    print(add_transaction)
+
+signed_txn = w3.eth.account.signTransaction(add_transaction, private_key=private_key)
+w3.eth.sendRawTransaction(signed_txn.rawTransaction)
+
+fact = "The times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+add_fact(CONTRACT_INSTANCE, ACCOUNT3_PRIVATE_KEY, ACCOUNT3_ADDRESS, fact)
+
