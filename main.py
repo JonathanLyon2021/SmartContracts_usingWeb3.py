@@ -88,3 +88,12 @@ def get_fact(contract_instance, index):
 
 get_fact(CONTRACT_INSTANCE, 0) # 0 is the index of the fact
 """Output: The times 03/Jan/2009 Chancellor on brink of second bailout for banks"""
+
+
+"""This method gets the number of facts that are stored in the contract"""
+def facts_count(contract_instance):
+    numberOfFacts = contract_instance.functions.count().call()
+    print("Stored facts in the contract:  ", numberOfFacts)
+
+facts_count(CONTRACT_INSTANCE)
+"""Output: Stored facts in the contract: 1 ->(so far we have stored only one fact)"""
