@@ -1,9 +1,6 @@
 # SmartContracts_usingWeb3.py
-This is exercise 17 from MI4 @ Kingsland Universities Blockchain Developer Program.
-
-# Goals
 In this exercise, we will use web3.py library for interacting with Ethereum. Its API is derived from the Web3.js
-JavaScript API and should be familiar to anyone who has used web3.js. The exercise will show how to interact with
+JavaScript API and should be familiar to anyone who has used **web3.js**. The exercise will show how to interact with
 an already deployed contract on the Ethereum Goerli Testnet.
 
 ## 1. Set up environment
@@ -14,8 +11,8 @@ For this exercise we will use web3 5.29.0.
       
 Create a new Python file.
 We will need HTTPProvider in order to create our connection to the Goerli Testnet using Infura.io.
-Now let’s get the necessary Infura.io provider. Go to https://infura.io/ and click [Get started for free]:
-Fill out the form and click [Submit]. Then copy the Ropsten URL.
+Now let’s get the necessary Infura.io provider. Go to *https://infura.io/* and click [Get started for free]:
+Fill out the form and click [Submit]. Then copy the Goerli URL.
 In order to get a contract instance of an already deployed contract, we will need its address and application binary
 interface. For exercise’s purpose, deploy a simple contract storing an array of facts through Remix IDE using
 MetaMask Goerli a provider.
